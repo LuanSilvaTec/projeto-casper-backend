@@ -27,7 +27,7 @@ export default class DialogHook {
             }
           }*/
             //return response.json(serializedNoticias)
-            let jsonDialog = request.body.fulfillmentMessages.push({
+            request.body.fulfillmentMessages.push({
                 
                     "attachment":{
                       "type":"template",
@@ -90,7 +90,7 @@ export default class DialogHook {
                     ],
                     //"source": "webhook"
                 }*/
-            response.json(jsonDialog)
+            response.json(request.body)
         }
 
 

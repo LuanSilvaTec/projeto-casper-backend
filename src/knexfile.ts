@@ -16,8 +16,11 @@ module.exports = {
       ssl: { rejectUnauthorized: false },
     },
     migrations: {
-      directory:'./database/migrations',
-    }
+      directory: __dirname +'/database/migrations',
+    },
+    seeds: {
+      directory: __dirname +"/database/seeds",
+    },
   }
 
 };

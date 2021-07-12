@@ -27,10 +27,8 @@ export default class DialogHook {
             }
           }*/
             //return response.json(serializedNoticias)
-            let responseJson = {}
-            let notice = [
+            let responseJson =
                 {
-                    "fulfillmentText": "Text response",
                     "fulfillmentMessages": [
                         {
                             "facebook": {
@@ -68,9 +66,6 @@ export default class DialogHook {
                     ],
                     "source": "webhook"
                 }
-
-            ]
-            responseJson = notice;
             response.json(responseJson)
         }
 

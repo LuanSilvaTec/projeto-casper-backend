@@ -26,52 +26,41 @@ export default class DialogHook {
           }*/
             //return response.json(serializedNoticias)
             console.log(request.body.queryResult)
-            request.body.queryResult.fulfillmentMessages.push(
+            request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements.push(
                 {
-                        "facebook": {
-                            "attachment": {
-                                "type": "template",
-                                "payload": {
-                                    "template_type": "generic",
-                                    "elements": [
-                                        {
-                                            "title": "Welcome!",
-                                            "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                            "subtitle": "We have the right hat for everyone.",
-                                            "buttons": [
-                                                {
-                                                    "type": "web_url",
-                                                    "url": "https://petersfancybrownhats.com",
-                                                    "title": "View Website"
-                                                }, {
-                                                    "type": "postback",
-                                                    "title": "Start Chatting",
-                                                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "title": "Welcome!",
-                                            "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                            "subtitle": "We have the right hat for everyone.",
-                                            "buttons": [
-                                                {
-                                                    "type": "web_url",
-                                                    "url": "https://petersfancybrownhats.com",
-                                                    "title": "View Website"
-                                                }, {
-                                                    "type": "postback",
-                                                    "title": "Start Chatting",
-                                                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
-                                                }
-                                            ]
-                                        }
-                                    ]
+                            "title": "Welcome!",
+                            "image_url": "https://petersfancybrownhats.com/company_image.png",
+                            "subtitle": "We have the right hat for everyone.",
+                            "buttons": [
+                                {
+                                    "type": "web_url",
+                                    "url": "https://petersfancybrownhats.com",
+                                    "title": "View Website"
+                                }, {
+                                    "type": "postback",
+                                    "title": "Start Chatting",
+                                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
                                 }
-                            }
+                            ]
+                        },
+                        {
+                            "title": "Welcome!",
+                            "image_url": "https://petersfancybrownhats.com/company_image.png",
+                            "subtitle": "We have the right hat for everyone.",
+                            "buttons": [
+                                {
+                                    "type": "web_url",
+                                    "url": "https://petersfancybrownhats.com",
+                                    "title": "View Website"
+                                }, {
+                                    "type": "postback",
+                                    "title": "Start Chatting",
+                                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                                }
+                            ]
                         }
-                    }
-                
+                    
+
             )
             /*
             let responseJson =

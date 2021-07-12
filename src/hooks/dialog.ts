@@ -7,7 +7,7 @@ export default class DialogHook {
         if (intentName == "noticias.famosos") {
             console.log("Teste de integração para busca de noticias sobre famosos.");
             const noticias = await knex('noticias').select('*').where('tema', 'Famosos');
-            console.log(noticias);
+            //console.log(noticias);
             const serializedNoticias = noticias.map(noticia => {
                 return {
                     image_url: noticia.url_imagem,
@@ -95,7 +95,7 @@ export default class DialogHook {
                     ],
                     //"source": "webhook"
                 }*/
-            console.log(request.body.queryResult.fulfillmentMessages)
+            console.log(request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements)
             response.json(request.body)
         }
 

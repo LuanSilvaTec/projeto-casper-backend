@@ -7,6 +7,7 @@ export default class DialogHook {
         if (intentName == "noticias.famosos") {
             console.log("Teste de integração para busca de noticias sobre famosos.");
             const noticias = await knex('noticias').select('*').where('tema','Famosos');
+            console.log(noticias);
             const serializedNoticias = noticias.map(noticia => {
                 return {
                     id: noticia.id,

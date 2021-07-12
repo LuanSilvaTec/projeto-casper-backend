@@ -97,6 +97,7 @@ export default class DialogHook {
                     ],
                     //"source": "webhook"
                 }*/
+            console.log(request.body.queryResult.fulfillmentMessages)
             response.json(request.body)
         }
 

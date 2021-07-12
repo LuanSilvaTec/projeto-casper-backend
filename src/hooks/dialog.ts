@@ -27,8 +27,8 @@ export default class DialogHook {
             }
           }*/
             //return response.json(serializedNoticias)
-            console.log(request.body)
-            request.body.fulfillmentMessages.push({
+            console.log(request.body.queryResult)
+            request.body.queryResult.fulfillmentMessages.push({
                 
                     "attachment":{
                       "type":"template",

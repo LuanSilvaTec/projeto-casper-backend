@@ -39,8 +39,8 @@ export default class DialogHook {
                                         "elements": [
                                             {
                                                 "title": serializedNoticias[0].titulo,
-                                                "image_url": "https://petersfancybrownhats.com/company_image.png",
-                                                "subtitle": "We have the right hat for everyone.",
+                                                "image_url": serializedNoticias[0].url_imagem,
+                                                "subtitle": serializedNoticias[0].descricao,
                                                 "default_action": {
                                                     "type": "web_url",
                                                     "url": "https://petersfancybrownhats.com/view?item=103",
@@ -49,7 +49,7 @@ export default class DialogHook {
                                                 "buttons": [
                                                     {
                                                         "type": "web_url",
-                                                        "url": "https://petersfancybrownhats.com",
+                                                        "url": serializedNoticias[0].url_noticia,
                                                         "title": "View Website"
                                                     }, {
                                                         "type": "postback",

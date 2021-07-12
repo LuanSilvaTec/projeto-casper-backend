@@ -7,8 +7,8 @@ const routes = express.Router()
 routes.use('/noticia', authRoute)
 routes.use('/session',Session)
 routes.use('/user',User)
-routes.use('/',(request, response)=>{
-    return ({message:"Teste"})
+routes.get('/',(request, response)=>{
+    response.send({message:"Teste"})
 })
 
 export default routes;

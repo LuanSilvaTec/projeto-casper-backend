@@ -41,12 +41,6 @@ export default class DialogHook {
                                                 "title": serializedNoticias[0].titulo,
                                                 "image_url": serializedNoticias[0].url_imagem,
                                                 "subtitle": serializedNoticias[0].descricao,
-                                                "default_action": {
-                                                    "type": "web_url",
-                                                    "url": "https://petersfancybrownhats.com/view?item=103",
-                                                    "messenger_extensions": true,
-                                                    "webview_height_ratio": "compact"
-                                                },
                                                 "buttons": [
                                                     {
                                                         "type": "web_url",

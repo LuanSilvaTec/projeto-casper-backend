@@ -44,7 +44,8 @@ export default class DialogHook {
                                                 "default_action": {
                                                     "type": "web_url",
                                                     "url": "https://petersfancybrownhats.com/view?item=103",
-                                                    "webview_height_ratio": "tall",
+                                                    "messenger_extensions": true,
+                                                    "webview_height_ratio": "compact"
                                                 },
                                                 "buttons": [
                                                     {
@@ -64,7 +65,7 @@ export default class DialogHook {
                             }
                         }
                     ],
-                    "source": "webhook"
+                    //"source": "webhook"
                 }
             response.json(responseJson)
         }

@@ -18,11 +18,19 @@ export default class DialogHook {
                     url_noticia: noticia.url_noticia
                 }
             })
+            
+                /*"facebook": {
+                  "attachment": {
+                    "type": "",
+                    "payload": {}
+                  }
+                }
+              }*/
             //return response.json(serializedNoticias)
             let responseJson={}
             let notice= [
                 {
-                "message":{
+                "facebook":{
                     "attachment":{
                       "type":"template",
                       "payload":{

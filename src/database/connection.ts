@@ -1,6 +1,8 @@
 import knex from 'knex';
-import path from 'path';
+const config =require('../knexfile.js')
 
+const env = process.env.DB_ENV ||'development'
+/*
 const connection = knex({
     client:'pg',
     connection: {
@@ -9,7 +11,8 @@ const connection = knex({
       },
     useNullAsDefault:true,
 
-})
-
-export default connection;
+})*/
+const db= knex(config[env])
+export default db;
+//export default connection;
 

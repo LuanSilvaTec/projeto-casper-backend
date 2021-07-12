@@ -25,9 +25,9 @@ export default class DialogHook {
             }
           }*/
             //return response.json(serializedNoticias)
-            console.log(request.body.queryResult)
+            //console.log(request.body.queryResult)
             request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements.push(
-                {
+                        {
                             "title": "Welcome!",
                             "image_url": "https://petersfancybrownhats.com/company_image.png",
                             "subtitle": "We have the right hat for everyone.",
@@ -59,8 +59,6 @@ export default class DialogHook {
                                 }
                             ]
                         }
-                    
-
             )
             /*
             let responseJson =

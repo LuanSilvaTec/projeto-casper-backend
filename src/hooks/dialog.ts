@@ -20,7 +20,8 @@ export default class DialogHook {
             })
             //return response.json(serializedNoticias)
             let responseJson={}
-            let notice= {
+            let notice= [
+                {
                 "message":{
                     "attachment":{
                       "type":"template",
@@ -53,6 +54,7 @@ export default class DialogHook {
                     }
                   }
                 }
+            ]
             responseJson= notice;
             response.json(responseJson)
         }

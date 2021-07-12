@@ -3,7 +3,10 @@ import path from 'path';
 
 const connection = knex({
     client:'pg',
-    connection:process.env.DATABASE_URL,
+    connection: {
+        connectionString: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false },
+      },
     useNullAsDefault:true,
 
 })

@@ -22,7 +22,7 @@ export default class DialogHook {
       
       let responseJson =
         {
-          //"payload":{
+          "payload":{
           "facebook": {
             "attachment":{
               "type":"template",
@@ -65,7 +65,7 @@ export default class DialogHook {
               }
             }
           }
-        //}
+        }
       }
       
       /*Sem parâmetro de payload */

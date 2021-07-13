@@ -16,34 +16,49 @@ export default class DialogHook {
                     url_noticia: noticia.url_noticia
                 }
             })
-
-            /*"facebook": {
-              "attachment": {
-                "type": "",
-                "payload": {}
-              }
-            }
-          }*/
-            //return response.json(serializedNoticias)
-            //console.log(request.body.queryResult)
-            request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements.push(
-                        {
-                            "title": "Welcome!",
-                            "image_url": "https://petersfancybrownhats.com/company_image.png",
-                            "subtitle": "We have the right hat for everyone.",
-                            "buttons": [
-                                {
-                                    "type": "web_url",
-                                    "url": "https://petersfancybrownhats.com",
-                                    "title": "View Website"
-                                }, {
-                                    "type": "postback",
-                                    "title": "Start Chatting",
-                                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
-                                }
-                            ]
-                        },
-            )
+            const elements = [{
+                "title": "Welcome!",
+                "subtitle": "We have the right hat for everyone.We have the right hat for everyone.We have the right hat for everyone.",
+                "imageUrl": "https://www.stepforwardmichigan.org/wp-content/uploads/2017/03/step-foward-fb-1200x628-house.jpg",
+                "buttons": [
+                  {
+                    "postback": "https://f1948e04.ngrok.io",
+                    "text": "View Website"
+                  }, {
+                    "text": "Start Chatting",
+                    "postback": "PAYLOAD EXAMPLE"
+                  }
+                ]
+              }, {
+                "title": "Welcome!",
+                "imageUrl": "https://www.stepforwardmichigan.org/wp-content/uploads/2017/03/step-foward-fb-1200x628-house.jpg",
+                "subtitle": "We have the right hat for everyone.We have the right hat for everyone.We have the right hat for everyone.",
+                "buttons": [
+                  {
+                    "postback": "https://f1948e04.ngrok.io",
+                    "text": "View Website"
+                  }, {
+                    "text": "Start Chatting",
+                    "postback": "PAYLOAD EXAMPLE"
+                  }
+                ]
+              },{
+                "title": "Welcome!",
+                "imageUrl": "https://www.stepforwardmichigan.org/wp-content/uploads/2017/03/step-foward-fb-1200x628-house.jpg",
+                "subtitle": "We have the right hat for everyone.We have the right hat for everyone.We have the right hat for everyone.",
+                "buttons": [
+                  {
+                    "postback": "https://f1948e04.ngrok.io",
+                    "text": "View Website"
+                  }, {
+                    "text": "Start Chatting",
+                    "postback": "PAYLOAD EXAMPLE"
+                  }
+                ]
+              }];
+            
+            request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.push(elements)
+                       
             /*
             let responseJson =
                 {
@@ -79,7 +94,7 @@ export default class DialogHook {
                     ],
                     //"source": "webhook"
                 }*/
-            console.log(request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements)
+            //console.log(request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements)
             response.json(request.body)
         }
 

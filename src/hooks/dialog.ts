@@ -70,7 +70,8 @@ export default class DialogHook {
       ]
       /*Sem parâmetro de payload */
       console.log(request.body.queryResult.fulfillmentMessages.push(responseJson))
-      //return(request.body.queryResult.fulfillmentMessages[1].payload.push(responseJson))
+      console.log(request.body.queryResult.fulfillmentMessages)
+      return(request.body)
       //console.log(request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements)
     }
   }

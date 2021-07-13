@@ -76,7 +76,7 @@ export default class DialogHook {
 
 
 
-      response.send(request.body)
+      response.send(responseJson)
       //console.log(request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements)
     }
   }

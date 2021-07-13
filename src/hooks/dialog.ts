@@ -20,7 +20,7 @@ export default class DialogHook {
       //request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.push(elements)
 
       
-      let responseJson =[
+      let responseJson =
         {
           "payload":{
           "facebook": {
@@ -67,7 +67,7 @@ export default class DialogHook {
           }
         }
       }
-      ]
+      
       /*Sem parâmetro de payload */
       console.log(request.body.queryResult.fulfillmentMessages.push(responseJson))
       console.log(request.body.queryResult.fulfillmentMessages)

@@ -99,7 +99,7 @@ export default class DialogHook {
                 }
               ]
             },
-            //"platform": "FACEBOOK"
+            "platform": "FACEBOOK"
           },
           {
             "card": {
@@ -113,7 +113,7 @@ export default class DialogHook {
                 }
               ]
             },
-            //"platform": "FACEBOOK"
+            "platform": "FACEBOOK"
           }
         ]
       });

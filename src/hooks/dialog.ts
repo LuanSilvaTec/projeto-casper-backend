@@ -30,7 +30,7 @@ export default class DialogHook {
         url_noticia: noticia.url_noticia
       }
     })
-    console.log(serializedNoticias)
+    //console.log(serializedNoticias)
     /*Sem parâmetro de payload */
     //console.log(request.body.queryResult.fulfillmentMessages.push(responseJson))
     //console.log(request.body.queryResult.fulfillmentMessages)
@@ -62,10 +62,7 @@ export default class DialogHook {
               "attachment": {
                 "type": "template",
                 "payload": {
-                  "template_type": "generic",
-                  "elements": [
-
-                  ]
+                  "template_type": "generic"
                 }
               }
             }
@@ -74,7 +71,7 @@ export default class DialogHook {
         }
       ]
     }
-
+    responseJson.fulfillmentMessages[0].payload.facebook.attachment[1].payload[1].push(elements)
 
     /*
     let responseJson={

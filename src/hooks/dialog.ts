@@ -89,7 +89,7 @@ export default class DialogHook {
           },
           {
             "card": {
-              "title": "Bem vindo ao nosso processo seletivo",
+              "title": "Bem vindo ao nosso processo seletivo LUAN SILVA",
               "subtitle": "Bem vindo ao nosso processo seletivo",
               "imageUri": "https://firebasestorage.googleapis.com/v0/b/universidade-3d7f8.appspot.com/o/processo%2Fprocesso-seletivo.png?alt=media&token=d5a89cec-1c07-4dad-9b44-7aaf098128bd",
               "buttons": [

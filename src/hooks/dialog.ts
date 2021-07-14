@@ -1,22 +1,28 @@
 import { Request, Response } from 'express';
 import knex from '../database/connection'
 export default class DialogHook {
-  async dialog(request: Request, response: Response) {
+  async consultarBanco(intent: string){
+    console.log("Teste de integração para busca de noticias sobre"+intent);
+    const noticias = await knex('noticias').select('*').where('tema', 'Famosos').limit(10);
+    //console.log(noticias);
+    const serializedNoticias = noticias.map(noticia => {
+      return {
+        image_url: noticia.url_imagem,
+        title: noticia.titulo,
+        subtitle: noticia.descricao,
+        url_noticia: noticia.url_noticia
+      }
+    })
 
+    return serializedNoticias
+  }
+  dialog(request: Request, response: Response) {
+
+    
     var intentName = request.body.queryResult.intent.displayName;
     if (intentName == "noticias.famosos") {
-      console.log("Teste de integração para busca de noticias sobre famosos.");
-      const noticias = await knex('noticias').select('*').where('tema', 'Famosos').limit(10);
-      //console.log(noticias);
-      const serializedNoticias = noticias.map(noticia => {
-        return {
-          image_url: noticia.url_imagem,
-          title: noticia.titulo,
-          subtitle: noticia.descricao,
-          url_noticia: noticia.url_noticia
-        }
-      })
-      
+      const noticias=this.consultarBanco('Famosos')
+      console.log(noticias)
       /*Sem parâmetro de payload */
       //console.log(request.body.queryResult.fulfillmentMessages.push(responseJson))
       //console.log(request.body.queryResult.fulfillmentMessages)

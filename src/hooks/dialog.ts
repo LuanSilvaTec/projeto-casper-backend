@@ -3,12 +3,24 @@ import knex from '../database/connection'
 export default class DialogHook {
   
   async dialog(request: Request, response: Response) {
-
+    let intent
     
     var intentName = request.body.queryResult.intent.displayName;
     if (intentName == "noticias.famosos") {
-      console.log("Teste de integração para busca de noticias sobre famosos.");
-      const noticias = await knex('noticias').select('*').where('tema', 'Famosos').limit(10);
+      intent='Famosos'
+    }
+    else if (intentName == "noticias.esportes") {
+      intent='Esportes'
+    }
+    else if (intentName == "noticias.entretenimento") {
+      intent='Entretenimento'
+    }
+    else if (intentName == "noticias.politica") {
+      intent='Política'
+    }
+
+      console.log("Teste de integração para busca de noticias sobre"+intent);
+      const noticias = await knex('noticias').select('*').where('tema', intent).limit(10);
       //console.log(noticias);
       const serializedNoticias = noticias.map(noticia => {
         return {
@@ -139,7 +151,7 @@ export default class DialogHook {
           }
         ]
       });*/
-    }
+    
 
 
 

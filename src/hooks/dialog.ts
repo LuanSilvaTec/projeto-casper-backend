@@ -53,11 +53,6 @@ export default class DialogHook {
                             "type": "web_url",
                             "url": "https://petersfancybrownhats.com"
                           },
-                          {
-                            "type": "postback",
-                            "payload": "DEVELOPER_DEFINED_PAYLOAD",
-                            "title": "Start Chatting"
-                          }
                         ]
                       },
                       {
@@ -66,11 +61,6 @@ export default class DialogHook {
                             "url": "https://petersfancybrownhats.com",
                             "title": "View Website",
                             "type": "web_url"
-                          },
-                          {
-                            "title": "Start Chatting",
-                            "type": "postback",
-                            "payload": "DEVELOPER_DEFINED_PAYLOAD"
                           }
                         ],
                         "image_url": "https://petersfancybrownhats.com/company_image.png",

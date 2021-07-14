@@ -85,7 +85,7 @@ export default class DialogHook {
                 "Você escolheu Famosos"
               ]
             },
-            "platform": "FACEBOOK"
+            //"platform": "FACEBOOK"
           },
           {
             "payload": {
@@ -134,7 +134,7 @@ export default class DialogHook {
                 }
               }
             },
-            "platform": "FACEBOOK"
+            //"platform": "FACEBOOK"
           }
         ]
       });

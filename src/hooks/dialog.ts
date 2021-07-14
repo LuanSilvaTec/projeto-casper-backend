@@ -135,7 +135,7 @@ export default class DialogHook {
           {
             "text": {
               "text": [
-                "Não há notícias cadastradas sobre " + intent
+                "Desculpe, não há notícias cadastradas sobre " + intent
               ]
             }
           }

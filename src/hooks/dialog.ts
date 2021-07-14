@@ -19,7 +19,7 @@ export default class DialogHook {
       intent='Política'
     }
 
-      console.log("Teste de integração para busca de noticias sobre"+intent);
+      console.log("Teste de integração para busca de noticias sobre "+intent);
       const noticias = await knex('noticias').select('*').where('tema', intent).limit(10);
       //console.log(noticias);
       const serializedNoticias = noticias.map(noticia => {
@@ -39,14 +39,6 @@ export default class DialogHook {
 
       let responseJson={
         "fulfillmentMessages": [
-          {
-            "text": {
-              "text": [
-                "Você escolheu Famosos"
-              ]
-            },
-            "platform": "FACEBOOK"
-          },
           {
             "payload": {
               "facebook": {

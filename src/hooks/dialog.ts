@@ -79,53 +79,6 @@ export default class DialogHook {
       }
 
       console.log(responseJson.fulfillmentMessages[0].payload.facebook.attachment)
-
-      //responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(elements)
-
-      /*
-      let responseJson={
-        "fulfillmentMessages": [
-          {
-            "payload": {
-              "facebook": {
-                "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "generic",
-                    "elements": [
-                      {
-                        "title": "Welcome LUAN SILVA!",
-                        "subtitle": "We have the right hat for everyone.",
-                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                        "buttons": [
-                          {
-                            "title": "View Website",
-                            "type": "web_url",
-                            "url": "https://petersfancybrownhats.com"
-                          },
-                        ]
-                      },
-                      {
-                        "buttons": [
-                          {
-                            "url": "https://petersfancybrownhats.com",
-                            "title": "View Website",
-                            "type": "web_url"
-                          }
-                        ],
-                        "image_url": "https://petersfancybrownhats.com/company_image.png",
-                        "title": "Welcome SILVA!",
-                        "subtitle": "We have the right hat for everyone."
-                      }
-                    ]
-                  }
-                }
-              }
-            },
-            "platform": "FACEBOOK"
-          }
-        ]
-      }*/
       response.json(responseJson)
 
     }
@@ -142,9 +95,5 @@ export default class DialogHook {
         ]
       })
     }
-
-
-
-
   }
 }

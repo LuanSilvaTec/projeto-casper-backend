@@ -17,58 +17,6 @@ export default class DialogHook {
         }
       })
       
-      //request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.push(elements)
-
-      /*
-      let responseJson =
-        {
-          "payload":{
-          "facebook": {
-            "attachment":{
-              "type":"template",
-              "payload":{
-                "template_type":"generic",
-                "elements":[
-                   {
-                    "title":"Welcome!",
-                    "image_url":"https://petersfancybrownhats.com/company_image.png",
-                    "subtitle":"We have the right hat for everyone.",
-                    "buttons":[
-                      {
-                        "type":"web_url",
-                        "url":"https://petersfancybrownhats.com",
-                        "title":"View Website"
-                      },{
-                        "type":"postback",
-                        "title":"Start Chatting",
-                        "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                      }              
-                    ]      
-                  },
-                   {
-                    "title":"Welcome!",
-                    "image_url":"https://petersfancybrownhats.com/company_image.png",
-                    "subtitle":"We have the right hat for everyone.",
-                    "buttons":[
-                      {
-                        "type":"web_url",
-                        "url":"https://petersfancybrownhats.com",
-                        "title":"View Website"
-                      },{
-                        "type":"postback",
-                        "title":"Start Chatting",
-                        "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                      }              
-                    ]      
-                  }
-                ]
-              }
-            }
-          }
-        }
-      }
-        */
-      
       /*Sem parâmetro de payload */
       //console.log(request.body.queryResult.fulfillmentMessages.push(responseJson))
       //console.log(request.body.queryResult.fulfillmentMessages)
@@ -85,7 +33,7 @@ export default class DialogHook {
                 "Você escolheu Famosos"
               ]
             },
-            //"platform": "FACEBOOK"
+            "platform": "FACEBOOK"
           },
           {
             "payload": {
@@ -126,7 +74,7 @@ export default class DialogHook {
                           }
                         ],
                         "image_url": "https://petersfancybrownhats.com/company_image.png",
-                        "title": "Welcome!",
+                        "title": "Welcome SILVA!",
                         "subtitle": "We have the right hat for everyone."
                       }
                     ]
@@ -134,11 +82,13 @@ export default class DialogHook {
                 }
               }
             },
-            //"platform": "FACEBOOK"
+            "platform": "FACEBOOK"
           }
         ]
       });
-      //console.log(request.body.queryResult.fulfillmentMessages[1].payload.facebook.attachment.payload.elements)
     }
+
+
+
   }
 }

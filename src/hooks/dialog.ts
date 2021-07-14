@@ -71,10 +71,11 @@ export default class DialogHook {
           },
         ]
       }
+      console.log(obj)
       responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(obj)
     }
 
-    console.log(elements)
+    console.log(responseJson)
     
     //responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(elements)
 

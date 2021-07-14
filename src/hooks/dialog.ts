@@ -36,24 +36,6 @@ export default class DialogHook {
     //console.log(request.body.queryResult.fulfillmentMessages)
     //console.log(request.body)
     //console.log(request.body.queryResult)
-    const elements = []
-    for(var i=0; i<serializedNoticias.length; i++){
-      let obj = {
-        "title": serializedNoticias[i].title,
-        "subtitle": serializedNoticias[i].subtitle,
-        "image_url": serializedNoticias[i].image_url,
-        "buttons": [
-          {
-            "title": "View",
-            "type": "web_url",
-            "url": serializedNoticias[i].url_noticia
-          },
-        ]
-      }
-      elements.push(obj)
-    }
-
-    console.log(elements)
     let responseJson = {
       "fulfillmentMessages": [
         {
@@ -74,7 +56,27 @@ export default class DialogHook {
         }
       ]
     }
-    responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(elements)
+
+    const elements = []
+    for(var i=0; i<serializedNoticias.length; i++){
+      let obj = {
+        "title": serializedNoticias[i].title,
+        "subtitle": serializedNoticias[i].subtitle,
+        "image_url": serializedNoticias[i].image_url,
+        "buttons": [
+          {
+            "title": "View",
+            "type": "web_url",
+            "url": serializedNoticias[i].url_noticia
+          },
+        ]
+      }
+      responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(obj)
+    }
+
+    console.log(elements)
+    
+    //responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(elements)
 
     /*
     let responseJson={

@@ -96,7 +96,7 @@ export default class DialogHook {
                     "template_type": "generic",
                     "elements": [
                       {
-                        "title": "Welcome!",
+                        "title": "Welcome LUAN SILVA!",
                         "subtitle": "We have the right hat for everyone.",
                         "image_url": "https://petersfancybrownhats.com/company_image.png",
                         "buttons": [

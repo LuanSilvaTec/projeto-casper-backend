@@ -75,7 +75,7 @@ export default class DialogHook {
       responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(obj)
     }
 
-    console.log(responseJson.fulfillmentMessages[0].payload)
+    console.log(responseJson.fulfillmentMessages[0].payload.facebook.attachment)
     
     //responseJson.fulfillmentMessages[0].payload.facebook.attachment.payload.elements.push(elements)
 

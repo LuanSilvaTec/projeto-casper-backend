@@ -25,8 +25,69 @@ export default class DialogHook {
       //console.log(request.body)
       //console.log(request.body.queryResult)
 
-
-
+      let responseJson={
+        "fulfillmentMessages": [
+          {
+            "text": {
+              "text": [
+                "Você escolheu Famosos"
+              ]
+            },
+            "platform": "FACEBOOK"
+          },
+          {
+            "payload": {
+              "facebook": {
+                "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [
+                      {
+                        "title": "Welcome LUAN SILVA!",
+                        "subtitle": "We have the right hat for everyone.",
+                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                        "buttons": [
+                          {
+                            "title": "View Website",
+                            "type": "web_url",
+                            "url": "https://petersfancybrownhats.com"
+                          },
+                          {
+                            "type": "postback",
+                            "payload": "DEVELOPER_DEFINED_PAYLOAD",
+                            "title": "Start Chatting"
+                          }
+                        ]
+                      },
+                      {
+                        "buttons": [
+                          {
+                            "url": "https://petersfancybrownhats.com",
+                            "title": "View Website",
+                            "type": "web_url"
+                          },
+                          {
+                            "title": "Start Chatting",
+                            "type": "postback",
+                            "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                          }
+                        ],
+                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                        "title": "Welcome SILVA!",
+                        "subtitle": "We have the right hat for everyone."
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "platform": "FACEBOOK"
+          }
+        ]
+      }
+      response.json(responseJson)
+      /*
       response.json({
         "fulfillmentMessages": [
           {
@@ -87,7 +148,7 @@ export default class DialogHook {
             "platform": "FACEBOOK"
           }
         ]
-      });
+      });*/
     }
 
 

@@ -81,7 +81,7 @@ export default class DialogHook {
         "fulfillmentMessages": [
                 {
                   "card": {
-                    "title": "Processo Seletivo",
+                    "title": "Processo Seletivo Luan silva",
                     "subtitle": "Bem vindo ao nosso processo seletivo",
                     "imageUri": "https://firebasestorage.googleapis.com/v0/b/universidade-3d7f8.appspot.com/o/processo%2Fprocesso-seletivo.png?alt=media&token=d5a89cec-1c07-4dad-9b44-7aaf098128bd"
                   }

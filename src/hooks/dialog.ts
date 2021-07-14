@@ -94,8 +94,19 @@ export default class DialogHook {
               "imageUri": "https://firebasestorage.googleapis.com/v0/b/universidade-3d7f8.appspot.com/o/processo%2Fprocesso-seletivo.png?alt=media&token=d5a89cec-1c07-4dad-9b44-7aaf098128bd",
               "buttons": [
                 {
-                  "text": "Abrir"
-                },
+                  "text": "Abrir",
+                  "postback": "https://www.twitch.tv/luansilva_7"
+                }
+              ]
+            },
+            "platform": "FACEBOOK"
+          },
+          {
+            "card": {
+              "title": "Bem vindo ao nosso processo seletivo LUAN SILVA",
+              "subtitle": "Bem vindo ao nosso processo seletivo",
+              "imageUri": "https://firebasestorage.googleapis.com/v0/b/universidade-3d7f8.appspot.com/o/processo%2Fprocesso-seletivo.png?alt=media&token=d5a89cec-1c07-4dad-9b44-7aaf098128bd",
+              "buttons": [
                 {
                   "text": "Abrir",
                   "postback": "https://www.twitch.tv/luansilva_7"

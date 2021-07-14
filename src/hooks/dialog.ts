@@ -88,30 +88,51 @@ export default class DialogHook {
             "platform": "FACEBOOK"
           },
           {
-            "card": {
-              "title": "Bem vindo ao nosso processo seletivo LUAN SILVA",
-              "subtitle": "Bem vindo ao nosso processo seletivo",
-              "imageUri": "https://firebasestorage.googleapis.com/v0/b/universidade-3d7f8.appspot.com/o/processo%2Fprocesso-seletivo.png?alt=media&token=d5a89cec-1c07-4dad-9b44-7aaf098128bd",
-              "buttons": [
-                {
-                  "text": "Abrir",
-                  "postback": "https://www.twitch.tv/luansilva_7"
+            "payload": {
+              "facebook": {
+                "attachment": {
+                  "type": "template",
+                  "payload": {
+                    "template_type": "generic",
+                    "elements": [
+                      {
+                        "title": "Welcome!",
+                        "subtitle": "We have the right hat for everyone.",
+                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                        "buttons": [
+                          {
+                            "title": "View Website",
+                            "type": "web_url",
+                            "url": "https://petersfancybrownhats.com"
+                          },
+                          {
+                            "type": "postback",
+                            "payload": "DEVELOPER_DEFINED_PAYLOAD",
+                            "title": "Start Chatting"
+                          }
+                        ]
+                      },
+                      {
+                        "buttons": [
+                          {
+                            "url": "https://petersfancybrownhats.com",
+                            "title": "View Website",
+                            "type": "web_url"
+                          },
+                          {
+                            "title": "Start Chatting",
+                            "type": "postback",
+                            "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                          }
+                        ],
+                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                        "title": "Welcome!",
+                        "subtitle": "We have the right hat for everyone."
+                      }
+                    ]
+                  }
                 }
-              ]
-            },
-            "platform": "FACEBOOK"
-          },
-          {
-            "card": {
-              "title": "Bem vindo ao nosso processo seletivo LUAN SILVA",
-              "subtitle": "Bem vindo ao nosso processo seletivo",
-              "imageUri": "https://firebasestorage.googleapis.com/v0/b/universidade-3d7f8.appspot.com/o/processo%2Fprocesso-seletivo.png?alt=media&token=d5a89cec-1c07-4dad-9b44-7aaf098128bd",
-              "buttons": [
-                {
-                  "text": "Abrir",
-                  "postback": "https://www.twitch.tv/luansilva_7"
-                }
-              ]
+              }
             },
             "platform": "FACEBOOK"
           }

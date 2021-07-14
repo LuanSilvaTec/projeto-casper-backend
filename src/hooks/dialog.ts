@@ -22,6 +22,7 @@ export default class DialogHook {
     console.log("Teste de integração para busca de noticias sobre " + intent);
     const noticias = await knex('noticias').select('*').where('tema', intent).limit(10);
     //console.log(noticias);
+    console.log("Tamanho do array: "+noticias.length);
     const serializedNoticias = noticias.map(noticia => {
       return {
         image_url: noticia.url_imagem,

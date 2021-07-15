@@ -88,7 +88,7 @@ export default class DialogHook {
           {
             "text": {
               "text": [
-                "Desculpe, não há notícias cadastradas sobre " + intent
+                "Desculpe, não há notícias cadastradas sobre " + intent + '. Digite "ok" para visualizar o menu novamente.'
               ]
             }
           }
